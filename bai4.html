@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+    <label>nhập tên:</label>
+    <input type="text" id="inputName"> </br>
+    <label>nhập điểm văn:</label>
+    <input type="number" id="inputLit"> </br>
+    <label>nhập điểm toán:</label>
+    <input type="number" id="inputMath"> </br>
+    <button onclick="calAvg()">calculate Average</button>
+
+    <p id="result"></p>
+    <script>
+        function calAvg(){
+            let name = document.getElementById("inputName").value
+            let litScore = parseInt(document.getElementById("inputLit").value)
+            let mathScore = parseInt(document.getElementById("inputMath").value)
+            document.getElementById("result").innerHTML = "thí sinh " + name + " được điểm trung bình là " + (litScore + mathScore)/2
+        }
+    </script>
+</body>
+</html>

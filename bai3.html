@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+    <table id="bangCuaChuong" style="border-collapse: collapse">
+    </table>
+    <script>
+        function index() {
+            let html = '';
+            for (let i = 1; i < 10; i++) {
+                html += '<tr style="border: 1px solid black">';
+                for (let j = 1; j < 10; j++) {
+                    html += '<td style="border: 1px solid black; text-align:center; width: 75px">'
+                        let a = i * j
+                        html += i.toString() + " * " + j.toString() + " = " + a
+                    html += '</td>'
+                }
+                html += '</tr>'
+            }
+            document.getElementById("bangCuaChuong").innerHTML = html
+        }
+        index();
+
+    </script>
+</body>
+</html>

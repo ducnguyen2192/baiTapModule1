@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+    <link rel="stylesheet" href="css/bai5.css">
+</head>
+<body>
+    <h1>Javascript căn bản</h1>
+    <h2>máy tính đơn giản</h2>
+    <div class="container">
+        <label >so thu 1: </label>
+        <input type="number" id="inputNum1">
+        <button class="button" onclick="plus()">+</button>
+        <button class="button" onclick="minus()">-</button>
+    </div>
+    <div class="container">
+        <label >so thu 2: </label>
+        <input type="number" id="inputNum2">
+        <button class="button" onclick="multiply()">*</button>
+        <button class="button" onclick="divide()">/</button>
+    </div>
+    <div class="container">
+        <label>Ket qua: </label>
+        <input type="number" id="result" placeholder="NaN"></input>
+    </div>
+
+
+
+
+
+    <script>
+        function plus (){
+            let x = document.getElementById("inputNum1").value;
+            let y = document.getElementById("inputNum2").value;
+            if (x.length == 0 || y.length == 0) {
+                alert("please input both numbers");
+            } else {
+                let num1 = parseInt(document.getElementById("inputNum1").value)
+                let num2 = parseInt(document.getElementById("inputNum2").value)
+                document.getElementById("result").value = num1 + num2
+            }
+            document.getElementById('inputNum1').value='';
+            document.getElementById('inputNum2').value='';
+
+        }
+        function minus (){
+            let x = document.getElementById("inputNum1").value;
+            let y = document.getElementById("inputNum2").value;
+            if (x.length == 0 || y.length == 0) {
+                alert("please input both numbers");
+            } else {
+                let num1 = parseInt(document.getElementById("inputNum1").value)
+                let num2 = parseInt(document.getElementById("inputNum2").value)
+                document.getElementById("result").value = num1 - num2
+            }
+            document.getElementById('inputNum1').value='';
+            document.getElementById('inputNum2').value='';
+        }
+        function multiply (){
+            let x = document.getElementById("inputNum1").value;
+            let y = document.getElementById("inputNum2").value;
+            if (x.length == 0 || y.length == 0) {
+                alert("please input both numbers");
+            } else {
+                let num1 = parseInt(document.getElementById("inputNum1").value)
+                let num2 = parseInt(document.getElementById("inputNum2").value)
+                document.getElementById("result").value = num1 * num2
+            }
+            document.getElementById('inputNum1').value='';
+            document.getElementById('inputNum2').value='';
+        }
+        function divide (){
+            let x = document.getElementById("inputNum1").value;
+            let y = document.getElementById("inputNum2").value;
+            if (x.length == 0 || y.length == 0) {
+                alert("please input both numbers");
+            } else {
+                let num1 = parseInt(document.getElementById("inputNum1").value)
+                let num2 = parseInt(document.getElementById("inputNum2").value)
+                document.getElementById("result").value = num1 / num2
+            }
+            document.getElementById('inputNum1').value='';
+            document.getElementById('inputNum2').value='';
+        }
+    </script>
+
+</body>
+</html>

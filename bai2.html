@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+    <script>
+        let arr = [1,-9,8,-7,6,11,59,110,0,5]
+        for(let j = 0; j < arr.length; j ++){
+            for (let i = 0; i < arr.length; i++) {
+                if(arr[i] > arr[i+1]){
+                    let b = arr[i];
+                    arr[i] = arr[i+1]
+                    arr[i+1] = b
+                }
+            }
+        }
+        console.log(arr)
+
+    </script>
+</body>
+</html>

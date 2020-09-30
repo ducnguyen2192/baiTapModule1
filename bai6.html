@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+
+    <script>
+        let arr = [
+            [1,1,1,2,2,3,3,4,5,5,6],
+            [1,1,2,2,3,4,5,6,7,8,9],
+            [1,1,1,2,4,4,4,4,5,5,8]
+        ]
+        let arrCount = []
+        let arrNew = []
+        let count = 1
+        for(let k = 0; k<arr.length; k++){
+            let a = arr[k][0]
+            for (let i = 0; i < arr[0].length; i++) {
+                if(a === arr[k][i+1]){
+                    count +=1
+                } else {
+                    a = arr[k][i+1]
+                    arrCount.push(count)
+                    count = 1
+                }
+            }
+            arrNew.push(arrCount)
+            arrCount = []
+        }
+        console.log(arrNew)
+    </script>
+</body>
+</html>
